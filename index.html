@@ -590,7 +590,7 @@
             </div>
 
             <div class="col-lg-6">
-              <form method="post" id="php-email-form">
+              <form id="php-email-form">
 
                 <div class="row gy-3">
                   <div class="col-lg-6">
@@ -624,7 +624,7 @@
                   </div>
 
                   <div class="mt-0">
-                    <input type="submit" class="btn btn-success" value="Send message">
+                    <input type="button" id="send_message" class="btn btn-success" value="Send message">
                   </div>
 
                 </div>
@@ -678,15 +678,18 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    function submitForm(e){
-      e.preventDefault();
+    const submit = document.querySelector("#send_message");
+    submit.addEventListener("click", function(){
+      
       swal("Thank you For Your Time!", "You message sent to Muhammad Azam you Can contact Whatsapp or Call !", "success", {
         button: "Dismiss !",
       });
-    }
+    })
+
 
   </script>
 
